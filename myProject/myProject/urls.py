@@ -21,5 +21,5 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('tweet', include('tweet.urls')), # we can use the include statement because we have already included the app in the INSTALLED_APPS in settings
+    path('tweet/', include('tweet.urls')), # we can use the include statement because we have already included the app in the INSTALLED_APPS in settings
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
